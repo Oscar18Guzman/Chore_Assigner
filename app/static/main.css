@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+
+.chore-details-body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(207, 205, 205)
+}
+.todays-chore-body {
+  background-color: rgb(207, 205, 205)
+
+
+}
+
+.container {
+  margin: 0 auto;
+  position: absolute;
+  top: 100px;
+}
+
+h1, h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+#nav-bar {
+  width: 100%
+}
+.accordion {
+  margin: 50px;
+}
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion a:hover::after {
+  border: 2px solid #03b5d2;
+}
+
+.accordion a.active {
+  color: #00ddff;
+  border-bottom: 2px solid #00dbfd;
+}
+
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #7288a2;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #7288a2;
+  text-align: center;
+}
+
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: rgb(207, 205, 205);
+}
+
+.accordion input{
+  display: none;
+}
+.accordion input + label {
+  position: relative;
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 40px;
+  background-color: #ddd;
+  background: #363636;
+  background: -webkit-linear-gradient(top, #363636 0%, #363636 50%, #454545 90%, #363636 100%);
+}
+.accordion label i {
+  font-size: 0.9em;
+  position: absolute;
+  left: 15px;
+  top: 14px;
+}
+.accordion label i.fa-chevron-down {
+  right: 20px;
+  left: auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.accordion input:checked + label {
+  background: #0B94BF;
+  color: #fff;
+}
+.accordion input:checked + label i.fa-chevron-down{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.accordion input + label:hover {
+  background: -webkit-linear-gradient(top, #009CCE 0%, #009CCE 50%, #00779D 90%, #009CCE 100%);
+  color: #fff;
+}
+.accordion .item {
+  transform: scaleY(0);
+  transform-origin: top;
+  max-height: 0px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #bbb;
+  padding: 0 15px;
+  font-weight: normal;
+  font-size: 14px;
+  background: #dfd1bd;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+#item1:checked ~ #content1,
+#item2:checked ~ #content2,
+#item3:checked ~ #content3,
+#item4:checked ~ #content4,
+#item5:checked ~ #content5 {
+  max-height: 550px;
+  transform: scaleY(1);
+}
+.accordion .item h4, .accordion .item p{
+  margin: 0;
+  padding: 0;
+}
+.accordion .item h4 {
+  padding: 10px;
+  border-bottom: 1px solid #bbb;
+}
+.accordion .item p {
+  padding: 10px 0;
+}
+
+.student-section {
+  position: absolute;
+  left: 300px;
+  top: 50px;
+}
+.item {
+  background-color: rgb(211, 207, 207);
+}
+
+.student-section2, .student-section3, .student-section4, .student-section5 {
+  position: absolute;
+  left: 400px;
+  top: 50px;
+}
+
+.student-name, .chore-name {
+  margin-left: 10px;
+  padding: 4px;
+  font-size: 1rem;
+}
+.chore-time {
+  font-size: 15px;
+}
