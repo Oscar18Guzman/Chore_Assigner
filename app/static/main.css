@@ -19,6 +19,12 @@
 
 }
 
+.btns {
+  border: 1.3px solid #03b5d2;
+  border-radius: 10px;
+  background-color: rgb(201, 201, 201);
+}
+
 .container {
   margin: 0 auto;
   position: absolute;

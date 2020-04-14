@@ -28,7 +28,7 @@
     <div class="accordion-item">
       <a style="font-size: 23px;">{{assignment.student.name}}</a>
       <div class="content">
-        <p style="font-size: 20px;"><strong>{{assignment.chore.name}}</strong></p>
+        <p style="font-size: 20px;"><strong>{{assignment.chore.name}} <button class="btns">incomplete</button></strong></p>
         <p><i>{{assignment.chore.description}}</i></p>
       </div>
     </div>
@@ -37,6 +37,7 @@
 </div>
 </body>
 <script>
+
 const items = document.querySelectorAll(".accordion a");
 function toggleAccordion(){
   this.classList.toggle('active');
@@ -44,5 +45,22 @@ function toggleAccordion(){
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+const buttons = document.querySelectorAll(".btns");
+buttons.forEach(button => button.addEventListener('click', () => {
+  if (button.innerText == 'incomplete') {
+      button.innerText = 'complete';
+    } else {
+      button.innerText = 'incomplete';
+    }
+}))
+{% comment %} for (const x of buttons) {
+  x.addEventListener('click', () => {
+    if (x.value == 'incomplete') {
+      x.value = 'complete';
+    } else {
+      x.value = 'complete';
+    }
+  })
+} {% endcomment %}
 </script>
 </html>

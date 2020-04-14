@@ -12,17 +12,3 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
   }
 
-
-
-const buttons = document.querySelectorAll('.btns');
-for (const button of buttons) {
-  button.addEventListener('click', () => {
-    if (button.innerText == 'incomplete'){
-      button.innerText == 'complete';   
-    } else {
-      button.innerText == 'complete';
-    }
-    
-  })
-
-}
