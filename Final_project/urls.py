@@ -20,6 +20,7 @@ import app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", app.views.home, name="home"),
+    path("swap_chores", app.views.swap_chores, name="swap_chores"),
     path("todays_chore", app.views.todays_chore, name="todays_chore"),
     path("chore_details", app.views.chore_details, name="chore_details")
 ]

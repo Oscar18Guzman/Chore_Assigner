@@ -22,7 +22,29 @@ def home(request):
 def chore_details(request):
     chores = Chore.objects.all()
     return render(request, 'chore_details.html', {"chores": chores})
-
+def swap_chores(request):
+    assignments = ChoreAssignment.for_this_week()
+    if date.today().weekday() == 0:
+        return render(request, 'todays_chore.html', {
+            "chore": assignments['monday']
+        })
+    if date.today().weekday() == 1:
+        return render(request, 'todays_chore.html', {
+            "chore": assignments['tuesday']
+        })
+    if date.today().weekday() == 2:
+        return render(request, 'todays_chore.html', {
+            "chore": assignments['wednesday']
+        })
+    if date.today().weekday() == 3:
+        return render(request, 'todays_chore.html', {
+            "chore": assignments['thursday']
+        })
+    if date.today().weekday() == 4:
+        return render(request, 'todays_chore.html', {
+            "chore": assignments['friday']
+        })
+    
 
 def todays_chore(request):
     assignments = ChoreAssignment.for_this_week()
@@ -47,14 +69,7 @@ def todays_chore(request):
             "chore": assignments['friday']
         })
     
-def toggle_complete(request, chore_id):
-    chore = Chore.objects.get(id=chore_id)
-    if chore.complete == False:
-        chore.complete == True
-        chore.save()
-    else:
-        chore.complete == False
-    return render(request, 'todays_chore.html', chore_id)
+
         
 class ChoreUpdate(UpdateView):
     model = Chore

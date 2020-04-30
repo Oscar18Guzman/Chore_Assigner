@@ -17,10 +17,14 @@
             <a href="{% url 'chore_details' %}" class="nav-link text-white">Chore info</a>
         </li>
         <li class="nav-item">
-            <a href="{% url 'todays_chore' %}" class="nav-link text-white">Today's Chores</a>
+          <a href="{% url 'swap_chores' %}" class="nav-link text-white">Swap Chores</a>
+        <li class="nav-item">
+            <a href="{% url 'todays_chore' %}" class="nav-link text-white">Today's Chore</a>
         </li>
     </ul>
-</nav>
+</nav> 
+<h1>Chore's of the week</h1>
+
   <div class="accordion">
     <input type="checkbox" id="item1" name="accordion1">
     <label for="item1"><i class="fa fa-check"></i>Monday<i class="fa fa-chevron-down"></i></label>

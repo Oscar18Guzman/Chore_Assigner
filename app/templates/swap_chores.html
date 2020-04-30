@@ -23,32 +23,3 @@
         </li>
     </ul>
 </nav> 
-<body class="chore-details-body">
-<div class="container">
-<h1>Chore info</h1>
-
-  <div class="accordion">
-  {% for chore in chores %}
-    <div class="accordion-item">
-      <a style="font-size: 23px;">{{chore.name}}</a>
-      <div class="content">
-        <p style="font-size: 20px;"><strong>{{chore.description}}</strong></p>
-        <p><i>done during the {{chore.time}}</i></p>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  
-</div>
-<script>
-const items = document.querySelectorAll(".accordion a");
-
-function toggleAccordion(){
-  this.classList.toggle('active');
-  this.nextElementSibling.classList.toggle('active');
-}
-
-items.forEach(item => item.addEventListener('click', toggleAccordion));
-</script>
-</body>
-</html>
